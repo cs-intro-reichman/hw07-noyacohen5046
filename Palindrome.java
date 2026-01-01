@@ -7,7 +7,13 @@ public class Palindrome {
 	
 	/** Checks if the given string is a palindrome. */
 	public static boolean isPalindrome(String s) {
-		//// Replace the followaing statement with your code
-		return false;
+		int len = s.length();
+		if (len <= 1){
+			return true;
+		}
+		if (s.charAt(0) != s.charAt(len - 1)){
+			return false;
+		}
+		return isPalindrome(s.substring(1, len - 1));
     }
 }
